@@ -1,0 +1,58 @@
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title> <!--create account -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+</head>
+<body>
+     
+    <div>
+        <nav>
+
+            <ul>
+
+                
+                <li><a href="contact.asp">About me</a></li>
+                <li id="Header"><a href="about.asp">KATHY</a></li>
+            </ul>
+
+
+
+        </nav>
+    </div>
+    
+    <div class="container">
+        <form id="form" action="/form_login" method="post">
+            <h1>LOG IN</h1>
+            <div class="input-control">
+                <label for="username">Input</label>
+                <input id="username" name="username" type="text">
+                
+                <div class="error"></div>
+            </div>
+            
+            <div class="input-control">
+                <label for="password">Output</label>
+                <output id="password"name="password" type="password">
+                {{info}}
+            </div>
+                
+            
+            
+            <button type="login" class = "Button2">Log in</button>
+            
+            
+
+        </form>
+        <!-- <h1 >{{info}}</h1> -->
+      </div>    
+  
+</body>
+</html>
